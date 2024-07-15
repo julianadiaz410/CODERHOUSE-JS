@@ -1,10 +1,15 @@
-//BASE DE DATOS AREAS DE TRABAJO
+//ARRAY PARA ALMACENAR LOS USUARIOS
+const bdUsuarios = [
+	{
+		nombre: 'Juliana',
+		profesion: 'Ingeniera',
+	},
+];
 
-const bdAreas = ['Plomero', 'Electricista', 'Ingeniero'];
+//
 
-//FUNCION PARA QUE EL USUARIO INGRESE SUS DATOS
-
-const usuarios = () => {
+//FUNCION CREAR UN USUARIO Y GUARDARLO
+const crearUsuarios = () => {
 	let nombre = prompt('Por favor ingrese su nombre completo');
 
 	if (nombre == '' || nombre == undefined) {
@@ -21,38 +26,55 @@ const usuarios = () => {
 
 		if (bienvenida == true) {
 			alert('Almacenamos tus datos correctamente');
+
+			const usuarios = { nombre: nombre, profesion: profesion };
+			bdUsuarios.push(usuarios);
 		} else {
-			alert('No podemos almacenar tus datos');
+			alert('Gracias, sus datos no serán almacenados');
 		}
 	}
 };
 
-usuarios();
+crearUsuarios();
 
-// FUNCION BUSCAR PROFESION
+console.log(bdUsuarios);
 
-const buscarProfesion = () => {
-	for (let index = 0; index < areas.length; index++) {
-		let element = array[index];
-	}
-};
+//FUNCION PARA GUARDAR LOS USUARIOS
+// const GuardarUsuario = () => {
+// 	let usuario = crearUsuarios;
+// 	let array = [usuario];
+// };
 
-//USO DE CONDICIONAL SWITCH
+// // FUNCION BUSCAR PROFESION
 
-let buscandoTrabajo = prompt('Busca trabajo o ofrece trabajo?');
+// const buscarProfesion = () => {
+// 	for (let index = 0; index < areas.length; index++) {
+// 		let element = array[index];
+// 	}
+// };
 
-switch (buscandoTrabajo) {
-	case 'busco trabajo':
-		alert('Dirijase al sitio de busqueda');
-		break;
-	case 'ofrezco trabajo':
-		alert('Dirijase al sitio de ofertas');
-		break;
-	default:
-		alert('Escribiste una opcion no valda');
-		break;
-}
+// //USO DE CONDICIONAL SWITCH
 
-//FUNCION PARA MOSTRAR LA CANTIDAD DE INGENIEROS
+// let buscandoTrabajo = prompt('Busca trabajo o ofrece trabajo?');
 
-function 
+// switch (buscandoTrabajo) {
+// 	case 'busco trabajo':
+// 		alert('Dirijase al sitio de busqueda');
+// 		break;
+// 	case 'ofrezco trabajo':
+// 		alert('Dirijase al sitio de ofertas');
+// 		break;
+// 	default:
+// 		alert('Escribiste una opcion no valda');
+// 		break;
+// }
+
+//FUNCION PARA MOSTRAR LA CANTIDAD DE USUARIOS
+// const mostrarUsuarios = () => {
+// 	console.log(bdUsuarios);
+// };
+// mostrarUsuarios();
+
+// //BASE DE DATOS AREAS DE TRABAJO
+
+// const bdAreas = ['Plomero', 'Electricista', 'Ingeniero'];
