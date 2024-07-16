@@ -41,7 +41,7 @@ const mostrarUsuarios = () => {
 			usuario.profesion
 		}\n`;
 	});
-	alert(usuariosInfo);
+	console.log(usuariosInfo);
 };
 
 // FUNCION BUSCAR PROFESION
