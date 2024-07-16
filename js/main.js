@@ -6,8 +6,6 @@ const bdUsuarios = [
 	},
 ];
 
-//
-
 //FUNCION CREAR UN USUARIO Y GUARDARLO
 const crearUsuarios = () => {
 	let nombre = prompt('Por favor ingrese su nombre completo');
@@ -39,35 +37,62 @@ crearUsuarios();
 
 console.log(bdUsuarios);
 
-//FUNCION PARA GUARDAR LOS USUARIOS
-// const GuardarUsuario = () => {
-// 	let usuario = crearUsuarios;
-// 	let array = [usuario];
-// };
+//ARRAY PARA ALMACENAR POFESIONES
 
-// // FUNCION BUSCAR PROFESION
+const bdProfesiones = [
+	{ profesion: 'Plomero', area: 'Construccion' },
+	{ profesion: 'Electricista', area: 'Construccion' },
+	{ profesion: 'Ingeniero Civil', area: 'Construcción' },
+	{ profesion: 'Ingeniero Mecanico', area: 'Mecanica' },
+	{ profesion: 'Medico Clinico', area: 'Salud' },
+];
 
-// const buscarProfesion = () => {
-// 	for (let index = 0; index < areas.length; index++) {
-// 		let element = array[index];
-// 	}
-// };
+// FUNCION BUSCAR PROFESION
 
-// //USO DE CONDICIONAL SWITCH
+const buscarProfesion = () => {
+	let profesionBuscada = parseInt (prompt(
+		'Escriba la numero de la profesión que busca \n 1. Plomero \n 2. Electricista \n 3 Ingeniero Civil \n 4 Ingeniero Mecanico \n 5 Medico Clinico'
+	));
 
-// let buscandoTrabajo = prompt('Busca trabajo o ofrece trabajo?');
+	switch (profesionBuscada) {
+		case 1:
+			alert("Dirijase a la sección de Construcción");
+			break;
+			case 2:
+				alert("Dirijase a la sección de Construcción");
+				break;
+			case 3:
+				alert("Dirijase a la sección de Construcción");
+				break;
+			case 4:
+				alert("Dirijase a la sección de Mecánica");
+				break;
+			case 4:
+				alert("Dirijase a la sección de Salud");
+				break;
+			default:
+			alert('Escribiste una opcion no valda');
+			break;
+}
 
-// switch (buscandoTrabajo) {
-// 	case 'busco trabajo':
-// 		alert('Dirijase al sitio de busqueda');
-// 		break;
-// 	case 'ofrezco trabajo':
-// 		alert('Dirijase al sitio de ofertas');
-// 		break;
-// 	default:
-// 		alert('Escribiste una opcion no valda');
-// 		break;
-// }
+buscarProfesion();
+
+
+//USO DE CONDICIONAL SWITCH
+
+let buscandoTrabajo = prompt('Busca trabajo o ofrece trabajo?');
+
+switch (buscandoTrabajo) {
+	case 'busco trabajo':
+		alert('Dirijase al sitio de busqueda');
+		break;
+	case 'ofrezco trabajo':
+		alert('Dirijase al sitio de ofertas');
+		break;
+	default:
+		alert('Escribiste una opcion no valda');
+		break;
+}
 
 //FUNCION PARA MOSTRAR LA CANTIDAD DE USUARIOS
 // const mostrarUsuarios = () => {
