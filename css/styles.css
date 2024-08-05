@@ -1,0 +1,37 @@
+body {
+	text-align: justify;
+}
+
+h1 {
+	background-color: darkolivegreen;
+	border-radius: 2%;
+}
+
+.app {
+	background-color: white;
+	color: darkolivegreen;
+}
+
+h3 {
+	color: dimgrey;
+}
+
+ul ol {
+	list-style-type: none;
+	float: left;
+	align-items: center;
+	padding-right: 10%;
+}
+
+h4 {
+	text-decoration: underline;
+	color: peru;
+}
+
+button {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 50px;
+	width: 100px;
+}
