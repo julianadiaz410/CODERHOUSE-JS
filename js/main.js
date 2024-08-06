@@ -5,9 +5,9 @@ import { mostrarComerciante } from './DBUsers/perfilComerciante.js';
 import { mostrarProfesional } from './DBUsers/perfilProfesional.js';
 
 login();
-// mostrarCliente();
-// mostrarComerciante();
-// mostrarProfesional();
+mostrarCliente();
+mostrarComerciante();
+mostrarProfesional();
 
 const frutas = [
 	{
@@ -19,3 +19,5 @@ const frutas = [
 		tamaño: 'chico',
 	},
 ];
+
+// frutas.forEach((el, ))
