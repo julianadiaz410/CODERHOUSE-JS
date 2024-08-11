@@ -58,13 +58,18 @@ export const mostrarProfesional = () => {
 			usuario.disponibilidad == true ? 'Disponible' : 'Ocupado'
 		}, Experiencia: ${usuario.experiencia}\n\n`;
 	});
-	for (const perfilProfe of perfilProfesional) {
+	//Podría haber utilizado el innerHTML=+
+	for (const perfilProfesion of perfilProfesional) {
 		let usuario = document.querySelector('.listaProfesional');
-		usuario.innerHTML = `<p>Nombre del Profesional: ${
-			perfilProfe.nombre
-		}</p><p>Profesión: ${perfilProfe.profesion}</p><p>Disponiblidad: ${
-			perfilProfe.disponibilidad == true ? 'Disponible' : 'Ocupado'
-		}</p><p>Experiencia: ${perfilProfe.experiencia}</p>`;
+		let disponibilidadClass = perfilProfesion.disponibilidad
+			? 'disponible'
+			: 'ocupado';
+		usuario.innerHTML = `<div class="perfilProfesion ${disponibilidadClass}">
+		<p>Nombre del Profesional: ${perfilProfesion.nombre}</p><p>Profesión: ${
+			perfilProfesion.profesion
+		}</p><p>Disponiblidad: ${
+			perfilProfesion.disponibilidad == true ? 'Disponible' : 'Ocupado'
+		}</p><p>Experiencia: ${perfilProfesion.experiencia}</p>`;
 	}
 };
 

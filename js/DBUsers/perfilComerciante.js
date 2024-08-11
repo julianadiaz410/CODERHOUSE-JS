@@ -26,8 +26,6 @@ export const crearComerciante = () => {
 		nombreProveedor == undefined ||
 		nombreComercio == '' ||
 		nombreComercio == undefined ||
-		disponibilidad == '' ||
-		disponibilidad == undefined ||
 		CUIT < 0 ||
 		CUIT == undefined
 	) {
@@ -53,15 +51,21 @@ export const mostrarComerciante = () => {
 			usuario.disponibilidad == true ? 'Disponible' : 'Ocupado'
 		}, CUIT: ${usuario.CUIT}\n\n`;
 	});
+
 	for (const perfilComercio of perfilComerciante) {
 		let usuario = document.querySelector('.listaComerciante');
-		usuario.innerHTML = `<p>Nombre del Comerciante: ${
-			perfilComercio.nombreProveedor
-		}</p><p>Nombre del Comercio: ${
-			perfilComercio.nombreComercio
-		}</p><p>Disponiblidad: ${
-			perfilComercio.disponibilidad == true ? 'Disponible' : 'Ocupado'
-		}</p><p>CUIT: ${perfilComercio.CUIT}</p>`;
+		let disponibilidadClass = perfilComercio.disponibilidad
+			? 'disponible'
+			: 'ocupado';
+
+		usuario.innerHTML += `<div class="perfilComercio ${disponibilidadClass}">
+			<p>Nombre del Comerciante: ${perfilComercio.nombreProveedor}</p>
+			<p>Nombre del Comercio: ${perfilComercio.nombreComercio}</p>
+			<p>Disponibilidad: ${
+				perfilComercio.disponibilidad == true ? 'Disponible' : 'Ocupado'
+			}</p>
+			<p>CUIT: ${perfilComercio.CUIT}</p>
+		</div>`;
 	}
 };
 

@@ -28,10 +28,30 @@ h4 {
 	color: peru;
 }
 
-button {
+#entrar {
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	height: 50px;
-	width: 100px;
+	bottom: 94%;
+	left: 82%;
+	width: 15%;
+	height: 3%;
+}
+
+/* #salir {
+	display: flex;
+	bottom: 94%;
+	left: 82%;
+	width: 15%;
+	height: 3%;
+} */
+
+.disponible {
+	background-color: green;
+	color: white;
+	border: 5px;
+}
+
+.ocupado {
+	background-color: red;
+	color: white;
+	border: 5px;
 }
