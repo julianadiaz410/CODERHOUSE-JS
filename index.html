@@ -1,35 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="img/empleado.png" type="image/x-icon" />
-		<link rel="stylesheet" href="css/styles.css" />
-		<script src="js/main.js" type="module"></script>
-		<title>BYOB</title>
+		<title>BYOB - Bienvenidos</title>
+		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<h1>BIENVENIDOS A:</h1>
-		<h1 class="app">BYOB</h1>
-		<h3>
-			Ésto es una aplicación para ofrecer servicios calificados por usuarios
-			comprobados
-		</h3>
-		<button id="entrar">LOGIN</button>
-		<!-- <button id="salir">SALIR</button> -->
-		<ul id="Informacion">
-			<ol>
-				<h4>Lista de Clientes</h4>
-				<li class="listaClientes"></li>
-			</ol>
-			<ol>
-				<h4>Lista de Comerciantes</h4>
-				<li class="listaComerciante"></li>
-			</ol>
-			<ol>
-				<h4>Lista de Profesionales</h4>
-				<li class="listaProfesional"></li>
-			</ol>
-		</ul>
+		<div class="container">
+			<h1>Bienvenidos a:</h1>
+			<h1 class="highlight">BYOB</h1>
+			<p>
+				Esto es una aplicación para ofrecer servicios calificados por usuarios
+				comprobados.
+			</p>
+			<a href="#" id="accessBtn" class="btn">¡ACCEDER AQUÍ!</a>
+		</div>
+
+		<!-- Popup para selección de perfil -->
+		<div id="profilePopup" class="popup">
+			<div class="popup-content">
+				<span id="closeProfilePopup" class="close">&times;</span>
+				<h2>Selecciona tu perfil</h2>
+				<div class="popup-options">
+					<button class="popup-button" id="providerBtn">
+						Proveedor / Servicio
+					</button>
+					<button class="popup-button" id="clientBtn">
+						Cliente / Consumidor
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Popup para selección de proveedor -->
+		<div id="providerPopup" class="popup">
+			<div class="popup-content">
+				<span id="closeProviderPopup" class="close">&times;</span>
+				<h2>Selecciona el tipo de proveedor</h2>
+				<div class="popup-options">
+					<button class="popup-button" id="commerceBtn">Comercio</button>
+					<button class="popup-button" id="professionalServiceBtn">
+						Servicio Profesional
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="popup.js"></script>
 	</body>
 </html>

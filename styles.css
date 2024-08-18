@@ -1,0 +1,139 @@
+/* Estilos generales del cuerpo */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Arial', sans-serif;
+	background: linear-gradient(120deg, #2980b9, #6dd5fa, #ffffff);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: #333;
+}
+
+/* Contenedor principal */
+.container {
+	text-align: center;
+	background-color: #ffffff;
+	padding: 50px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	max-width: 500px;
+}
+
+/* Títulos principales */
+.container h1 {
+	font-size: 2.8em;
+	color: #34495e;
+	margin-bottom: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+/* Texto destacado */
+.container .highlight {
+	color: #e67e22;
+	font-weight: bold;
+}
+
+/* Texto descriptivo */
+.container p {
+	font-size: 1.3em;
+	color: #7f8c8d;
+	margin-bottom: 20px;
+}
+
+/* Botón de acceso */
+.btn {
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 1.2em;
+	color: #fff;
+	background-color: #e67e22;
+	border: none;
+	border-radius: 25px;
+	text-decoration: none;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+.btn:hover {
+	background-color: #d35400;
+}
+
+/* Estilos para los popups */
+.popup {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Contenido del popup */
+.popup-content {
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 10px;
+	width: 80%;
+	max-width: 400px;
+	text-align: center;
+	position: relative;
+}
+
+/* Botón de cerrar popup */
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+}
+
+/* Botones en los popups */
+.popup-options {
+	margin-top: 20px;
+}
+
+.popup-button {
+	display: block;
+	margin: 10px auto;
+	padding: 10px 20px;
+	font-size: 1.2em;
+	color: #fff;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+/* Colores para los botones del popup */
+#providerPopup .popup-button {
+	background-color: #3498db;
+}
+
+#providerPopup .popup-button:hover {
+	background-color: #2980b9;
+}
+
+#profilePopup .popup-button {
+	background-color: #e67e22;
+}
+
+#profilePopup .popup-button:hover {
+	background-color: #d35400;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Servicio Profesional - BYOB</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Bienvenido a Servicios Profesionales</h1>
+			<p>
+				Como profesional, podrás ofrecer tus servicios a nuestros usuarios de
+				manera destacada.
+			</p>
+			<p>Aquí podrás:</p>
+			<ul>
+				<li>Crear un perfil profesional detallado.</li>
+				<li>Listar tus servicios y tarifas.</li>
+			</ul>
+
+			<form id="formProfesional">
+				<label for="nombre">Nombre Completo:</label>
+				<input type="text" id="nombre" name="nombre" required /><br /><br />
+
+				<label for="profesion">Profesión:</label>
+				<input
+					type="text"
+					id="profesion"
+					name="profesion"
+					required
+				/><br /><br />
+
+				<label for="disponibilidad">Disponibilidad:</label>
+				<select id="disponibilidad" name="disponibilidad">
+					<br /><br />
+					<option value="true">Disponible</option>
+					<option value="false">Ocupado</option></select
+				><br /><br />
+
+				<label for="experiencia">Años de Experiencia:</label>
+				<input
+					type="number"
+					id="experiencia"
+					name="experiencia"
+					min="0"
+					required
+				/><br /><br />
+
+				<button type="submit" class="btn">Agregar Profesional</button>
+			</form>
+
+			<h2>Profesionales Almacenados:</h2>
+			<table id="tablaProfesionales">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Nombre</th>
+						<th>Profesión</th>
+						<th>Disponibilidad</th>
+						<th>Experiencia</th>
+					</tr>
+				</thead>
+				<tbody id="cuerpoTabla">
+					<!-- Los datos de los profesionales se mostrarán aquí -->
+				</tbody>
+			</table>
+		</div>
+		<script src="perfilProfesional.js"></script>
+	</body>
+</html>

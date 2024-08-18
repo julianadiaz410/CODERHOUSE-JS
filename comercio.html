@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Comercio - BYOB</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Bienvenido a tu Comercio</h1>
+			<p>
+				Como comercio, puedes ofrecer tus productos y gestionar tus ventas de
+				manera eficiente.
+			</p>
+			<p>Aquí podrás:</p>
+			<ul>
+				<li>Crear y gestionar tus productos.</li>
+				<li>Actualizar tus precios y descripciones.</li>
+				<li>Ver estadísticas de ventas y clientes.</li>
+			</ul>
+			<form id="formComerciante">
+				<label for="nombreProveedor">Nombre del Proveedor:</label>
+				<input
+					type="text"
+					id="nombreProveedor"
+					name="nombreProveedor"
+					required
+				/><br /><br />
+
+				<label for="nombreComercio">Nombre del Comercio:</label>
+				<input
+					type="text"
+					id="nombreComercio"
+					name="nombreComercio"
+					required
+				/><br /><br />
+
+				<label for="disponibilidad">Disponibilidad:</label>
+				<select id="disponibilidad" name="disponibilidad">
+					<br />
+					<option value="true">Disponible</option>
+					<option value="false">Ocupado</option></select
+				><br /><br />
+
+				<label for="cuit">CUIT:</label>
+				<input type="text" id="cuit" name="cuit" required /><br /><br />
+
+				<button type="submit" class="btn">Crear Comerciante</button>
+			</form>
+
+			<h2>Comerciantes Almacenados:</h2>
+			<table id="tablaComerciantes">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Nombre del Comerciante</th>
+						<th>Nombre del Comercio</th>
+						<th>Disponibilidad</th>
+						<th>CUIT</th>
+					</tr>
+				</thead>
+				<tbody id="cuerpoTabla">
+					<!-- Los comerciantes se mostrarán aquí -->
+				</tbody>
+			</table>
+		</div>
+		<script src="perfilComerciante.js"></script>
+	</body>
+</html>

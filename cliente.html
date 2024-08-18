@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cliente - BYOB</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Bienvenido, Cliente</h1>
+			<p>
+				Como cliente, podrás disfrutar de una experiencia personalizada y
+				acceder a una amplia gama de servicios y productos.
+			</p>
+			<p>Aquí podrás:</p>
+			<ul>
+				<li>Buscar y seleccionar servicios o productos.</li>
+				<li>Gestionar tus preferencias y configuraciones.</li>
+				<li>Ver y calificar a los proveedores.</li>
+			</ul>
+			<form id="formCliente">
+				<label for="nombre">Ingresa tu nombre:</label>
+				<input type="text" id="nombre" name="nombre" required />
+				<button type="submit" class="btn-primary">Crear usuario</button>
+			</form>
+			<h2>Usuarios Almacenados:</h2>
+			<table id="tablaClientes">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Nombre</th>
+					</tr>
+				</thead>
+				<tbody id="cuerpoTabla">
+					<!-- Los usuarios se mostrarán aquí -->
+				</tbody>
+			</table>
+		</div>
+		<script src="perfilCliente.js"></script>
+	</body>
+</html>
